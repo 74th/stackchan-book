@@ -1,0 +1,13 @@
+.vivliostyle
+node_modules
+/*.pdf
+/*.zip
+work
+master
+node_modules
+*.DS_Store
+.ignore
+.DS_Store
+*-backups
+~*.lck
+old/

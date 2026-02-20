@@ -1,0 +1,12 @@
+{
+    "cSpell.ignorePaths": [
+        "research",
+        "sample_data",
+        "articles/**/img"
+    ],
+    "cSpell.words": [
+        "SPUSB"
+    ],
+    "workbench.colorTheme": "monokai-charcoal (orange)",
+    "chat.promptFiles": true
+}

@@ -1,0 +1,24 @@
+{
+  "name": "devcontainer-book-2nd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:mono": "OUTPUT_TYPE=MONO vivliostyle build -o devcontainer-book-2nd-mono.pdf",
+    "build:color": "OUTPUT_TYPE=COLOR vivliostyle build -o devcontainer-book-2nd-color.pdf",
+    "preview:mono": "OUTPUT_TYPE=MONO vivliostyle preview",
+    "preview:color": "OUTPUT_TYPE=COLOR vivliostyle preview",
+    "build-publish": "OUTPUT_TYPE=MONO vivliostyle build -p",
+    "build:theme": "cd theme-techbook && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@vivliostyle/cli": "^8.18.0",
+    "npm-run-all": "4.1.5",
+    "playwright-core": "^1.24.0",
+    "prettier": "^3.2.5"
+  }
+}

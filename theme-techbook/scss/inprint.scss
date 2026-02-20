@@ -1,0 +1,37 @@
+@use "variables";
+
+#inprint {
+  width: 9cm;
+  font-size: 9px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  margin: 0 auto;
+  margin-top: 2cm;
+  text-indent: 0em;
+}
+
+@page :left {
+  font-family: variables.$font-family;
+  margin-left: variables.$page-margin-outer;
+  margin-right: variables.$page-margin-inner;
+
+  @bottom-left {
+    font-size: 10px;
+    text-align: left;
+    padding: 0mm 2mm 2mm 2mm;
+    content: counter(page);
+  }
+}
+
+@page :right {
+  font-family: variables.$font-family;
+  margin-left: variables.$page-margin-inner;
+  margin-right: variables.$page-margin-outer;
+
+  @bottom-right {
+    font-size: 10px;
+    text-align: right;
+    padding: 0mm 2mm 2mm 2mm;
+    content: counter(page);
+  }
+}

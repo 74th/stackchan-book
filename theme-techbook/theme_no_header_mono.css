@@ -1,0 +1,718 @@
+@charset "UTF-8";
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*=language-],
+pre[class*=language-] {
+  color: #ffffff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: "Source Code Pro", "ヒラギノ角ゴシック ProN W3", "Hiragino Kaku Gothic ProN", "Source Han Sans", Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+  font-size: 9px;
+  line-height: 14px;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*=language-] {
+  border: 1px solid #cccccc;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #272727;
+}
+
+/* Inline code */
+:not(pre) > code[class*=language-] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: rgb(184, 200, 216);
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ffb1ce;
+}
+
+.token.boolean,
+.token.number {
+  color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #e6db74;
+}
+
+.token.keyword {
+  color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+  color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  margin: 1.5em 0;
+  line-height: 1.4 !important;
+  letter-spacing: 0.03rem !important;
+  border-radius: 0.2rem !important;
+  text-shadow: none !important;
+}
+
+:not(pre) > code {
+  padding: 0.1rem 0.3rem !important;
+  color: #34495e;
+  background-color: #ecf0f1;
+}
+
+:root {
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "Neue Frutiger World", "Verdana", "Yakumono", "body", "Hiragino Sans", sans-serif;
+  font-size: 9px;
+  line-height: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-feature-settings: "palt", "calt";
+  font-weight: normal;
+  font-family: "ヒラギノ角ゴシック ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 4px;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  padding-left: 4px;
+  padding-bottom: 1px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  border-bottom-width: 0.5px;
+  border-bottom-style: solid;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-top: 1em;
+  border-bottom-width: 0.5px;
+  border-bottom-style: dotted;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Source Code Pro", "ヒラギノ角ゴシック ProN W3";
+}
+
+.not-url a {
+  text-decoration: none;
+  color: black;
+  font-family: inherit;
+}
+
+.not-url a:visited,
+.not-url a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc a,
+.no_change_font a {
+  font-family: inherit;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+p {
+  font-feature-settings: "calt";
+  text-align: justify;
+  text-indent: 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+pre {
+  margin: 1.5rem 0;
+  box-decoration-break: clone;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.5em;
+  margin: 1em 0;
+}
+ul ul, ul ol,
+ol ul,
+ol ol {
+  margin: 0 0;
+}
+
+figure {
+  margin: 0.5rem auto;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  margin: 0.2rem auto;
+}
+figure figcaption {
+  margin: 0rem auto;
+  width: 90%;
+  font-size: 90%;
+  break-inside: avoid;
+}
+figure img[src$=".png"],
+figure img[src$=".jpg"],
+figure img[src$=".jpeg"],
+figure img[src$=".gif"],
+figure img[src$=".webp"] {
+  image-resolution: 200dpi;
+}
+
+table {
+  display: table;
+  font-size: 0.8rem;
+  max-width: 100%;
+  margin: 0.8rem auto;
+  border-color: currentColor;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 0.1rem 1rem 0.1rem 0;
+  text-align: left;
+  background-color: transparent;
+  border: 0;
+}
+table th:first-child,
+table td:first-child {
+  padding-left: 1rem;
+}
+table th {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+table tr {
+  box-shadow: 0 0.7px 0 -0.3px currentColor;
+}
+table tr:last-child {
+  border-bottom: 1px solid;
+}
+
+blockquote {
+  margin: 0.7rem 0.5rem;
+  background-color: #ecf0f1;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  border-radius: 0.2rem;
+}
+blockquote :not(pre) > code {
+  padding: 0;
+  word-break: break-all;
+}
+blockquote p {
+  text-indent: 0;
+}
+
+code {
+  font-family: "Source Code Pro", "ヒラギノ角ゴシック ProN W3";
+  font-size: 0.8em;
+}
+
+.page-break {
+  page-break-after: always !important;
+}
+
+p.auther {
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+div.twitter-link {
+  left: 0px;
+  right: 0px;
+  padding-top: 22mm;
+  text-align: center;
+}
+div.twitter-link img {
+  padding-top: 10mm;
+  width: 160px;
+}
+div.twitter-link p {
+  text-align: center;
+}
+
+div.after-comment p {
+  text-indent: 0em;
+  margin-top: 2mm;
+  margin-bottom: 2mm;
+}
+
+.footnotes {
+  font-size: 75%;
+}
+
+body {
+  counter-reset: section subsection fig tbl footnote cite;
+}
+
+a[data-ref=sec],
+a[data-ref=subsec],
+a[data-ref=fig],
+a[data-ref=tbl],
+a[data-ref=cite] {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 0.15em;
+}
+
+a[data-ref=sec]::before {
+  content: "§" target-counter(attr(href), section);
+}
+
+a[data-ref=subsec]::before {
+  content: "§" target-counter(attr(href), section) "." target-counter(attr(href url), subsection);
+}
+
+a[data-ref=fig]::before {
+  content: "Fig. " target-counter(attr(href), fig);
+}
+:root:lang(ja) a[data-ref=fig]::before {
+  content: "図" target-counter(attr(href), fig);
+}
+
+a[data-ref=tbl]::before {
+  content: "Table " target-counter(attr(href), tbl);
+}
+:root:lang(ja) a[data-ref=tbl]::before {
+  content: "表" target-counter(attr(href), fig);
+}
+
+a[data-ref=cite]::before {
+  content: "[" target-counter(attr(href), cite) "]";
+}
+
+section {
+  counter-increment: section;
+  counter-reset: subsection;
+}
+section article {
+  counter-increment: subsection;
+}
+
+figure.fig {
+  counter-increment: fig;
+}
+figure.fig figcaption::before {
+  content: "Fig. " counter(fig) ": ";
+}
+:root:lang(ja) figure.fig figcaption::before {
+  content: "図" counter(fig) ": ";
+}
+
+figure.tbl {
+  counter-increment: tbl;
+}
+figure.tbl figcaption::before {
+  content: "Table " counter(tbl) ": ";
+}
+:root:lang(ja) figure.tbl figcaption::before {
+  content: "表" counter(tbl) ": ";
+}
+
+.footnote {
+  counter-increment: footnote;
+}
+.footnote::footnote-call, .footnote::footnote-marker {
+  content: "[" counter(footnote) "]";
+}
+.footnote::footnote-call {
+  font-size: 80%;
+  margin: 0 0.3rem;
+}
+.footnote::footnote-marker {
+  margin-right: 0.2rem;
+}
+
+ol.cite-items {
+  padding-left: 2rem;
+  list-style: none;
+}
+ol.cite-items li {
+  counter-increment: cite;
+  position: relative;
+}
+ol.cite-items li::before {
+  content: "[" counter(cite) "] ";
+  position: absolute;
+  left: -2rem;
+}
+
+@media screen {
+  body {
+    margin: auto 4rem;
+    padding-bottom: 4rem;
+  }
+  article {
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+  section {
+    clear: both;
+  }
+  figure {
+    max-width: 50rem;
+  }
+  .footnote {
+    vertical-align: super;
+    background-color: rgba(214, 255, 0, 0.4);
+    margin: 0 0.1rem;
+    line-height: 0;
+  }
+  .footnote a {
+    word-break: break-all;
+  }
+  a[data-ref=sec],
+  a[data-ref=subsec],
+  a[data-ref=fig],
+  a[data-ref=tbl],
+  a[data-ref=cite] {
+    color: #e74c3c;
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  a[data-ref=sec]::before {
+    content: "§ XXX";
+  }
+  a[data-ref=subsec]::before {
+    content: "§ XXX.XXX";
+  }
+  a[data-ref=fig]::before {
+    content: "Fig. XXX";
+  }
+  :root:lang(ja) a[data-ref=fig]::before {
+    content: "図 XXX";
+  }
+  a[data-ref=tbl]::before {
+    content: "Table XXX";
+  }
+  :root:lang(ja) a[data-ref=tbl]::before {
+    content: "表 XXX";
+  }
+  a[data-ref=cite]::before {
+    content: "[XXX]";
+  }
+}
+@media print {
+  :root {
+    widows: 3;
+    orphans: 3;
+    hyphens: auto;
+    font-size: 75%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+  }
+  tr,
+  th,
+  td {
+    break-inside: avoid;
+  }
+  .footnote {
+    float: footnote;
+    text-align: left;
+  }
+}
+@page {
+  size: 148mm 210mm;
+  margin-top: 13mm;
+  margin-bottom: 10mm;
+  @top-left-corner {
+    content: "";
+    margin-bottom: 4mm;
+    margin-top: -3mm;
+    margin-left: -3mm;
+  }
+  @top-center {
+    content: "";
+    margin-bottom: 4mm;
+    margin-top: -3mm;
+    margin-left: -1mm;
+    margin-right: -1mm;
+    padding-left: 1mm;
+    padding-right: 1mm;
+  }
+  @top-right-corner {
+    content: "";
+    margin-bottom: 4mm;
+    margin-top: -3mm;
+    margin-right: -3mm;
+  }
+  @bottom-left-corner {
+    content: "";
+    margin-top: -8mm;
+    margin-bottom: -3mm;
+    margin-left: -3mm;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+  @bottom-right-corner {
+    content: "";
+    margin-top: -8mm;
+    margin-bottom: -3mm;
+    margin-right: -3mm;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+}
+nav#toc,
+nav[role=doc-toc] {
+  font-size: 100%;
+}
+nav#toc li,
+nav[role=doc-toc] li {
+  list-style-type: none;
+}
+nav#toc li a::after,
+nav[role=doc-toc] li a::after {
+  content: target-counter(attr(href), page);
+}
+nav#toc li a,
+nav[role=doc-toc] li a {
+  display: inline-flex;
+  width: 100%;
+  text-decoration: none;
+  color: currentColor;
+  align-items: baseline;
+}
+nav#toc li a::before,
+nav[role=doc-toc] li a::before {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-bottom: solid 1px;
+  content: "";
+  order: 1;
+  flex: auto;
+}
+nav#toc li a::after,
+nav[role=doc-toc] li a::after {
+  text-align: right;
+  content: target-counter(attr(href), page);
+  align-self: flex-end;
+  flex: none;
+  order: 2;
+}
+
+img.toppage {
+  width: 100%;
+  height: 100%;
+}
+
+/* 画像はグレースケール化 */
+a {
+  color: black;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.punctuation,
+.namespace,
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.boolean,
+.token.number,
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name,
+.token.keyword,
+.token.regex,
+.token.important {
+  opacity: 1;
+  color: #000000;
+}
+
+:not(pre) > code {
+  color: #000000;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+  color: #000000;
+  background-color: #f8f8f8;
+}
+
+pre[class*=language-] {
+  color: #000000;
+  border: 1px solid #cccccc;
+}
+
+:not(pre) > code[class*=language-],
+pre[class*=language-] {
+  background: #f8f8f8;
+}
+
+.footnote-back {
+  color: white;
+}
+
+@media print {
+  @page {
+    bleed: 3mm;
+  }
+  body {
+    background-color: #fff;
+  }
+}
+#inprint {
+  width: 9cm;
+  font-size: 9px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  margin: 0 auto;
+  margin-top: 2cm;
+  text-indent: 0em;
+}
+
+@page :left {
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "Neue Frutiger World", "Verdana", "Yakumono", "body", "Hiragino Sans", sans-serif;
+  margin-left: 6mm;
+  margin-right: 12mm;
+  @bottom-left {
+    font-size: 10px;
+    text-align: left;
+    padding: 0mm 2mm 2mm 2mm;
+    content: counter(page);
+  }
+}
+@page :right {
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "Neue Frutiger World", "Verdana", "Yakumono", "body", "Hiragino Sans", sans-serif;
+  margin-left: 12mm;
+  margin-right: 6mm;
+  @bottom-right {
+    font-size: 10px;
+    text-align: right;
+    padding: 0mm 2mm 2mm 2mm;
+    content: counter(page);
+  }
+}
+a {
+  color: black;
+}
+
+/*# sourceMappingURL=theme_no_header_mono.css.map */

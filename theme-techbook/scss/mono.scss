@@ -1,0 +1,80 @@
+/* 画像はグレースケール化 */
+// figure img {
+//   filter: grayscale(100%);
+// }
+// img.toppage {
+//   filter: grayscale(100%);
+// }
+
+a {
+  color: black;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.punctuation,
+.namespace,
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.boolean,
+.token.number,
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name,
+.token.keyword,
+.token.regex,
+.token.important {
+  opacity: 1;
+  color: #000000;
+}
+:not(pre) > code {
+  color: #000000;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #000000;
+  background-color: #f8f8f8;
+}
+
+pre[class*="language-"] {
+  color: #000000;
+  border: 1px solid #cccccc;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f8f8f8;
+}
+
+.footnote-back {
+  color: white;
+}
+
+// @media print {
+//   // 塗り足し追加
+//   @page {
+//       bleed: 3mm;
+//     }
+//     body {
+//       background-color: #fff;
+//     }
+// }

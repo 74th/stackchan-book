@@ -1,0 +1,19 @@
+@use "lib-prism-okaidia.scss";
+@use "lib-override.scss";
+@use "base.scss";
+@use "counter.scss";
+@use "media.scss";
+@use "toc.scss";
+@use "mono.scss";
+@use "inprint.scss";
+
+figure img {
+  // filter: grayscale(100%);
+}
+img.toppage {
+  // filter: grayscale(100%);
+}
+
+a {
+  color: black;
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@vivliostyle/theme-techbook",
+  "description": "Techbook (技術同人誌) theme",
+  "version": "0.2.0",
+  "author": "Vivliostyle <mail@vivliostyle.org>",
+  "scripts": {
+    "build": "run-s build:mono build:color build:no_header",
+    "build:mono": "sass scss/app_mono.scss:theme_mono.css && sass scss/app_no_header_mono.scss:theme_no_header_mono.css ",
+    "build:color": "sass scss/app.scss:theme_color.css && sass scss/app_no_header.scss:theme_no_header.css",
+    "watch:mono": "sass --watch scss/app_mono.scss:theme_mono.css",
+    "watch:color": "sass --watch scss/app.scss:theme_color.css",
+    "watch:no_header": "sass --watch scss/app_no_header.scss:theme_no_header.css"
+  },
+  "devDependencies": {
+    "@vivliostyle/cli": "^4.3.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.88.0",
+    "vivliostyle-theme-scripts": "^0.3.5"
+  },
+  "files": [
+    "*.css",
+    "*.css.map",
+    "scss",
+    "example"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivliostyle/themes.git",
+    "directory": "packages/@vivliostyle/theme-techbook"
+  },
+  "homepage": "https://github.com/vivliostyle/themes",
+  "keywords": [
+    "vivliostyle",
+    "vivliostyle-theme"
+  ],
+  "license": "CC0-1.0",
+  "vivliostyle": {
+    "theme": {
+      "name": "Techbook",
+      "category": "misc",
+      "style": "./theme_mono.css",
+      "topics": [
+        "Techbook"
+      ]
+    }
+  },
+  "gitHead": "b6dd255b3e11e11232d92685cad9b810f43198e2",
+  "dependencies": {
+    "bootstrap": "^5.3.6"
+  }
+}
