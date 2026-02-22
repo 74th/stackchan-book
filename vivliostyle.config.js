@@ -24,7 +24,7 @@ switch (outputType) {
 
 /** @type {import('@vivliostyle/cli').VivliostyleConfigSchema} */
 const vivliostyleConfig = {
-  title: "DevContainer Guidebook 2nd Edition",
+  title: "ホームAIエージェントスタックチャン製作記",
   author: "Atsushi Morimoto (@74th)",
   language: "ja",
   // readingProgression: 'rtl', // reading progression direction, 'ltr' or 'rtl'.
@@ -37,14 +37,6 @@ const vivliostyleConfig = {
       theme: no_header_theme,
     },
     "./articles/1-architecture/README.md",
-    "./articles/2-build_devcontainer/README.md",
-    "./articles/3-tools/README.md",
-    "./articles/4-devcontainer_howto/README.md",
-    "./articles/5-devcontainer_features/README.md",
-    "./articles/6-samples/README.md",
-    "./articles/7-network_dedicated_environment/README.md",
-    "./articles/8-local_agentic_coding/README.md",
-    "./articles/9-cloud_agentic_coding/README.md",
     {
       path: "./articles/99-epilogue/README.md",
       theme: no_header_theme,
