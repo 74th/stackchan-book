@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:mono": "OUTPUT_TYPE=MONO vivliostyle build -o devcontainer-book-2nd-mono.pdf",
-    "build:color": "OUTPUT_TYPE=COLOR vivliostyle build -o devcontainer-book-2nd-color.pdf",
+    "build:mono": "OUTPUT_TYPE=MONO vivliostyle build -o stackchan-book-mono.pdf",
+    "build:color": "OUTPUT_TYPE=COLOR vivliostyle build -o stackchan-book-color.pdf",
     "preview:mono": "OUTPUT_TYPE=MONO vivliostyle preview",
     "preview:color": "OUTPUT_TYPE=COLOR vivliostyle preview",
     "build-publish": "OUTPUT_TYPE=MONO vivliostyle build -p",

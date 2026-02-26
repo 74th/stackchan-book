@@ -24,7 +24,7 @@ switch (outputType) {
 
 /** @type {import('@vivliostyle/cli').VivliostyleConfigSchema} */
 const vivliostyleConfig = {
-  title: "ホームAIエージェントスタックチャン製作記",
+  title: "ホームAIエージェントｽﾀｯｸﾁｬﾝ製作記",
   author: "Atsushi Morimoto (@74th)",
   language: "ja",
   // readingProgression: 'rtl', // reading progression direction, 'ltr' or 'rtl'.
@@ -36,7 +36,7 @@ const vivliostyleConfig = {
       path: "./articles/0-prologue/README.md",
       theme: no_header_theme,
     },
-    "./articles/1-architecture/README.md",
+    "./articles/1-stachchan/README.md",
     {
       path: "./articles/99-epilogue/README.md",
       theme: no_header_theme,
