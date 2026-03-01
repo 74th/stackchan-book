@@ -37,6 +37,11 @@ const vivliostyleConfig = {
       theme: no_header_theme,
     },
     "./articles/1-stachchan/README.md",
+    "articles/2-architecture/README.md",
+    "articles/3-firmware/README.md",
+    "articles/4-ai_agent/README.md",
+    "articles/5-home_agent/README.md",
+    "articles/10-home_server/README.md",
     {
       path: "./articles/99-epilogue/README.md",
       theme: no_header_theme,
