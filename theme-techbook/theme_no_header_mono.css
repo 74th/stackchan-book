@@ -274,13 +274,16 @@ table {
 table th,
 table td {
   padding: 0.1rem 1rem 0.1rem 0;
-  text-align: left;
-  background-color: transparent;
-  border: 0;
 }
 table th:first-child,
 table td:first-child {
   padding-left: 1rem;
+}
+table th,
+table td {
+  text-align: left;
+  background-color: transparent;
+  border: 0;
 }
 table th {
   border-top: 1px solid;
@@ -671,14 +674,6 @@ pre[class*=language-] {
   color: white;
 }
 
-@media print {
-  @page {
-    bleed: 3mm;
-  }
-  body {
-    background-color: #fff;
-  }
-}
 #inprint {
   width: 9cm;
   font-size: 9px;
