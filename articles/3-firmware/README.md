@@ -627,3 +627,66 @@ FLASHのパーティション中にモデルを書き込むなど、インクル
 筆者の製作では、このESP-SRをウェイクアップワード技術に採用しました。
 検出精度は、筆者の発音が悪いのか、3回に1回くらい失敗するくらいです。
 ですが、イベント会場のある程度騒がしい場所でも動作しています。
+
+## 3.6. Web Socketコントロールスタックチャン
+
+ここまで、Web Socketを使った通信方法や、M5Unifiedでの各機能の使い方を説明してきました。
+
+Pythonサーバでコントロールできるようにまとめたファームウェアと、Pythonライブラリを作成し、以下のオープンソースとして公開しています。
+
+> 74th/websocket-control-stackchan: StackChan WebSocket Control Server</br/>https://github.com/74th/websocket-control-stackchan/
+
+このライブラリの詳しい使い方は、リポジトリのREADMEを参照してください。
+
+このライブラリを使うことで、ファームウェア側のコードはこのライブラリのコードに任せて、スタックチャンの動作を以下のように実装できます。
+
+```python
+from google import genai
+from stackchan_server.app import StackChanApp
+from stackchan_server.ws_proxy import WsProxy
+
+app = StackChanApp()
+
+client = genai.Client(vertexai=True).aio
+
+instruction = """
+あなたは親切な音声アシスタントです。
+音声で返答するため、マークダウンは記述せず、簡潔に答えてください。
+だいたい3文程度で答えてください。
+""".replace("\n", "")
+
+@app.setup
+async def setup(proxy: WsProxy):
+  logger.info("WebSocket connected")
+
+@app.talk_session
+async def talk_session(proxy: WsProxy):
+  chat = client.chats.create(
+      model="gemini-3-flash-preview",
+      config=types.GenerateContentConfig(
+      system_instruction=instruction,
+    ),
+  )
+
+  while True:
+    text = await proxy.listen()
+    if not text:
+      return
+    logger.info("Human: %s", text)
+
+    # AI応答の取得
+    resp = await chat.send_message(text)
+
+    # 発話
+    logger.info("AI: %s", resp.text)
+    if resp.text:
+      await proxy.speak(resp.text)
+```
+
+`@app.setup` デコレータを付けた関数は、クライアントがWebSocketに接続したときに呼び出されます。
+`@app.talk_session` デコレータを付けた関数は、「ハイ！スタックチャン！」とWakeupWordが検出されたときに呼び出されます。
+この関数の中で、`proxy.listen()` でスタックチャンが聞く状態になり、ユーザの発話をテキストで受け取ることができます。
+そして、`proxy.speak()` でスタックチャンが発話する内容をテキストで指定できます。
+この`proxy.listen()` と `proxy.speak()` の間に、Gemini等のチャットのAPIを呼び出す処理を入れることで、AIで応答を行うスタックチャンができるようになっています。
+
+次の章からは、このライブラリを使って、AI応答の部分を作り込んでいきます。
